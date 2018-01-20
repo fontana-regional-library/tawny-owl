@@ -1,6 +1,16 @@
+<<<<<<< HEAD
 # tawny-owl
 
 > Prototype for the Fontana Regional Library web app.
+=======
+
+# Tawny Owl
+
+> Non-library: "Tawny Owl" - they're evolving and so are we! (and it's cuter than worms & germs) - Amy West
+
+**Tawny Owl** is our prototype for our website. It's where we experiment and iterate, where we figure out what's next, what's useful, what works for patrons, and what works for us.
+
+>>>>>>> 59e8adcc52fa62267efda8a6de120655a2abd2c2
 
 ## Build Setup
 
@@ -27,7 +37,11 @@ npm run e2e
 npm test
 ```
 
+<<<<<<< HEAD
 To update the github page with the latest version:
 ```
 git subtree push --prefix dist origin gh-pages
 ```
+=======
+For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+>>>>>>> 59e8adcc52fa62267efda8a6de120655a2abd2c2
