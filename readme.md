@@ -1,16 +1,8 @@
-<<<<<<< HEAD
-# tawny-owl
-
-> Prototype for the Fontana Regional Library web app.
-=======
-
 # Tawny Owl
 
 > Non-library: "Tawny Owl" - they're evolving and so are we! (and it's cuter than worms & germs) - Amy West
 
 **Tawny Owl** is our prototype for our website. It's where we experiment and iterate, where we figure out what's next, what's useful, what works for patrons, and what works for us.
-
->>>>>>> 59e8adcc52fa62267efda8a6de120655a2abd2c2
 
 ## Build Setup
 
@@ -37,11 +29,11 @@ npm run e2e
 npm test
 ```
 
-<<<<<<< HEAD
-To update the github page with the latest version:
+We can and do load-up a work-in-progress version of this web app to github pages,
+which is sourced out of the `/docs` directory on the `master` branch. To spin this up,
+just
 ```
-git subtree push --prefix dist origin gh-pages
+npm run publish
 ```
-=======
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
->>>>>>> 59e8adcc52fa62267efda8a6de120655a2abd2c2
+which will build the app, make a copy of the build in the `/docs` folder, and then do 
+some magic with leading slashes so Github knows where to find its files. Give it a try.

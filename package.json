@@ -6,7 +6,6 @@
   "homepage": "https://github.com/fontana-regional-library/tawny-owl",
   "private": true,
   "scripts": {
-    "deploy": "node ./node_modules/vue-gh-pages/index.js",
     "dev": "node build/dev-server.js",
     "start": "node build/dev-server.js",
     "build": "node build/build.js",
@@ -86,7 +85,6 @@
     "sw-precache-webpack-plugin": "^0.11.4",
     "uglify-es": "^3.1.3",
     "url-loader": "^0.6.2",
-    "vue-gh-pages": "^1.8.4",
     "vue-loader": "^13.3.0",
     "vue-style-loader": "^3.0.3",
     "vue-template-compiler": "^2.5.2",
