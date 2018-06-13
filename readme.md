@@ -1,4 +1,4 @@
-# Tawny Owl
+# Michael Owl
 
 > Non-library: "Tawny Owl" - they're evolving and so are we! (and it's cuter than worms & germs) - Amy West
 
