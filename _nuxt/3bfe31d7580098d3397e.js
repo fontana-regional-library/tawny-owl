@@ -636,7 +636,7 @@ function _setContext() {
                 store: app.store,
                 payload: context.payload,
                 error: context.error,
-                base: '/tawny-owl-nuxt/dist',
+                base: '/tawny-owl-nuxt',
                 env: {} // Only set once
 
               };
@@ -1204,7 +1204,7 @@ var scrollBehavior = function scrollBehavior(to, from, savedPosition) {
 function createRouter() {
   return new vue_router_esm["a" /* default */]({
     mode: 'history',
-    base: '/tawny-owl-nuxt/dist',
+    base: '/tawny-owl-nuxt',
     linkActiveClass: 'nuxt-link-active',
     linkExactActiveClass: 'nuxt-link-exact-active',
     scrollBehavior: scrollBehavior,
