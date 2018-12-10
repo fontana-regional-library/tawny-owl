@@ -6,12 +6,12 @@
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./pages/events/_slug/index.vue?vue&type=template&id=4e71c71c&
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_vm._v("Hey we are here")])}
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./pages/events/_slug/index.vue?vue&type=template&id=a23e9b5e&
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('Event',{attrs:{"event-object":_vm.eventObject}})}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./pages/events/_slug/index.vue?vue&type=template&id=4e71c71c&
+// CONCATENATED MODULE: ./pages/events/_slug/index.vue?vue&type=template&id=a23e9b5e&
 
 // EXTERNAL MODULE: ./node_modules/regenerator-runtime/runtime.js
 var runtime = __webpack_require__(31);
@@ -22,7 +22,6 @@ var asyncToGenerator_default = /*#__PURE__*/__webpack_require__.n(asyncToGenerat
 
 // EXTERNAL MODULE: ./node_modules/axios/index.js
 var axios = __webpack_require__(4);
-var axios_default = /*#__PURE__*/__webpack_require__.n(axios);
 
 // CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/events/_slug/index.vue?vue&type=script&lang=js&
 
@@ -40,25 +39,47 @@ var axios_default = /*#__PURE__*/__webpack_require__.n(axios);
       return this.$store.getters['getEventBySlug'](this.$route.params.slug);
     }
   },
-  asyncData: function () {
-    var _asyncData = asyncToGenerator_default()(
+  fetch: function () {
+    var _fetch = asyncToGenerator_default()(
     /*#__PURE__*/
     regeneratorRuntime.mark(function _callee(_ref) {
-      var params, _ref2, data;
-
+      var route, store, event;
       return regeneratorRuntime.wrap(function _callee$(_context) {
         while (1) {
           switch (_context.prev = _context.next) {
             case 0:
-              params = _ref.params;
-              _context.next = 3;
-              return axios_default.a.get("https://fontana.librarians.design/wp-json/wp/v2/events/?slug=".concat(params.slug));
+              route = _ref.route, store = _ref.store;
+              event = store.getters['getEventBySlug'](route.params.slug);
 
-            case 3:
-              _ref2 = _context.sent;
-              data = _ref2.data;
+              if (!(event === null)) {
+                _context.next = 5;
+                break;
+              }
+
+              _context.next = 5;
+              return store.dispatch('getEventBySlug', {
+                slug: route.params.slug
+              });
 
             case 5:
+              if (!(store.state.authors.length === 0)) {
+                _context.next = 8;
+                break;
+              }
+
+              _context.next = 8;
+              return store.dispatch('getAuthors');
+
+            case 8:
+              if (!(store.state.events.length === 0)) {
+                _context.next = 11;
+                break;
+              }
+
+              _context.next = 11;
+              return store.dispatch('getUpcomingEvents');
+
+            case 11:
             case "end":
               return _context.stop();
           }
@@ -66,50 +87,7 @@ var axios_default = /*#__PURE__*/__webpack_require__.n(axios);
       }, _callee, this);
     }));
 
-    function asyncData(_x) {
-      return _asyncData.apply(this, arguments);
-    }
-
-    return asyncData;
-  }(),
-  fetch: function () {
-    var _fetch = asyncToGenerator_default()(
-    /*#__PURE__*/
-    regeneratorRuntime.mark(function _callee2(_ref3) {
-      var route, store;
-      return regeneratorRuntime.wrap(function _callee2$(_context2) {
-        while (1) {
-          switch (_context2.prev = _context2.next) {
-            case 0:
-              route = _ref3.route, store = _ref3.store;
-              console.log('here');
-
-              if (!(store.state.authors.length === 0)) {
-                _context2.next = 5;
-                break;
-              }
-
-              _context2.next = 5;
-              return store.dispatch('getAuthors');
-
-            case 5:
-              if (!(store.state.events.length === 0)) {
-                _context2.next = 8;
-                break;
-              }
-
-              _context2.next = 8;
-              return store.dispatch('getUpcomingEvents');
-
-            case 8:
-            case "end":
-              return _context2.stop();
-          }
-        }
-      }, _callee2, this);
-    }));
-
-    function fetch(_x2) {
+    function fetch(_x) {
       return _fetch.apply(this, arguments);
     }
 
