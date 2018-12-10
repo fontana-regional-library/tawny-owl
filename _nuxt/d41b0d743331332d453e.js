@@ -1128,8 +1128,8 @@ var router_070a706c = function _070a706c() {
   return interopDefault(__webpack_require__.e(/* import() | pages/services/index */ 6).then(__webpack_require__.bind(null, 181)));
 };
 
-var router_33766c86 = function _33766c86() {
-  return interopDefault(__webpack_require__.e(/* import() | pages/events/_slug */ 2).then(__webpack_require__.bind(null, 180)));
+var router_09904e80 = function _09904e80() {
+  return interopDefault(__webpack_require__.e(/* import() | pages/events/_slug/index */ 2).then(__webpack_require__.bind(null, 180)));
 };
 
 var router_0a77b2fc = function _0a77b2fc() {
@@ -1218,7 +1218,7 @@ function createRouter() {
       name: "services"
     }, {
       path: "/events/:slug",
-      component: router_33766c86,
+      component: router_09904e80,
       name: "events-slug"
     }, {
       path: "/services/:slug",

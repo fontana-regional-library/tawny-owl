@@ -6,12 +6,12 @@
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./pages/events/_slug.vue?vue&type=template&id=73a0c8d6&
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./pages/events/_slug/index.vue?vue&type=template&id=4e71c71c&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_vm._v("Hey we are here")])}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./pages/events/_slug.vue?vue&type=template&id=73a0c8d6&
+// CONCATENATED MODULE: ./pages/events/_slug/index.vue?vue&type=template&id=4e71c71c&
 
 // EXTERNAL MODULE: ./node_modules/regenerator-runtime/runtime.js
 var runtime = __webpack_require__(31);
@@ -24,7 +24,7 @@ var asyncToGenerator_default = /*#__PURE__*/__webpack_require__.n(asyncToGenerat
 var axios = __webpack_require__(4);
 var axios_default = /*#__PURE__*/__webpack_require__.n(axios);
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/events/_slug.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/events/_slug/index.vue?vue&type=script&lang=js&
 
 
 //
@@ -35,12 +35,11 @@ var axios_default = /*#__PURE__*/__webpack_require__.n(axios);
 //
 
 /* harmony default export */ var _slugvue_type_script_lang_js_ = ({
-  /*
   computed: {
-    eventObject() {
+    eventObject: function eventObject() {
       return this.$store.getters['getEventBySlug'](this.$route.params.slug);
-    },
-  },*/
+    }
+  },
   asyncData: function () {
     var _asyncData = asyncToGenerator_default()(
     /*#__PURE__*/
@@ -53,14 +52,13 @@ var axios_default = /*#__PURE__*/__webpack_require__.n(axios);
             case 0:
               params = _ref.params;
               _context.next = 3;
-              return axios_default.a.get("https://fontana.librarians.design/wp-json/wp/v2/events/?slug=".concat(slug));
+              return axios_default.a.get("https://fontana.librarians.design/wp-json/wp/v2/events/?slug=".concat(params.slug));
 
             case 3:
               _ref2 = _context.sent;
               data = _ref2.data;
-              console.log(data);
 
-            case 6:
+            case 5:
             case "end":
               return _context.stop();
           }
@@ -118,12 +116,12 @@ var axios_default = /*#__PURE__*/__webpack_require__.n(axios);
     return fetch;
   }()
 });
-// CONCATENATED MODULE: ./pages/events/_slug.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./pages/events/_slug/index.vue?vue&type=script&lang=js&
  /* harmony default export */ var events_slugvue_type_script_lang_js_ = (_slugvue_type_script_lang_js_); 
 // EXTERNAL MODULE: ./node_modules/vue-loader/lib/runtime/componentNormalizer.js
 var componentNormalizer = __webpack_require__(13);
 
-// CONCATENATED MODULE: ./pages/events/_slug.vue
+// CONCATENATED MODULE: ./pages/events/_slug/index.vue
 
 
 
@@ -142,7 +140,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   
 )
 
-component.options.__file = "_slug.vue"
+component.options.__file = "index.vue"
 /* harmony default export */ var _slug = __webpack_exports__["default"] = (component.exports);
 
 /***/ })
